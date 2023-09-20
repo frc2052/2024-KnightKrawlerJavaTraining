@@ -1,0 +1,2 @@
+Do all of the variables have a type?
+When combining things within a print out we need a character in between each thing
