@@ -1,1 +1,1 @@
-This is the KnightKrawler Find The Bug Challege!
+2024 KnightKrawler Java Training
