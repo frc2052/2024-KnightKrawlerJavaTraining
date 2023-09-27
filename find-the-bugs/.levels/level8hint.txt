@@ -1,0 +1,3 @@
+While loop is missing something...
+If you want to increase a variable by an amount you can use += (is something else used accidentally?)
+'If' statement has something wrong when checking if the time is ABOVE 12 (which direction should the < or > be?)

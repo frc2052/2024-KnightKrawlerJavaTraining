@@ -1,0 +1,1 @@
+The bug in this code is related to the calculation of the digit sum. Make sure you correctly extract and add the individual digits of the number.

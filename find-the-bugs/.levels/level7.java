@@ -1,22 +1,23 @@
 public class level7 {
 
-    boolean isDriving;
-
-    // pretend this is a speed sensor on a wheel and a sensor for if the engine is on
-    int fakeWheelSpeedSensor = 0;
-    boolean fakeEngineOn = false;
-
-    public level7(){
-
-    }
-
     public static void main(String...args){
 
+        // pretend this is a speed sensor on a wheel and a sensor for if the engine is on
+        double fakeWheelSpeedSensor = 0;
+        boolean fakeEngineSensor = false;
+
+        if (checkIfDriving(fakeWheelSpeedSensor, fakeEngineSensor)){
+            System.out.println("DRIVING");
+        } else  {
+            System.out.println("NOT DRIVING");
+        }
     }
 
-    private checkIfDriving(int wheelSpeed, boolean engineOn){
-        if (wheelSpeed > 0 && engineOn){
-            isDriving = true;
+    public static checkIfDriving(double wheelSpeed, boolean isEngineOn){
+        if (wheelSpeed > 0 && isEngineOn){
+            return true;
+        } else {
+            return false;
         }
     }
 }

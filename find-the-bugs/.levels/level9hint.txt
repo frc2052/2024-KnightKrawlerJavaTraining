@@ -1,0 +1,2 @@
+Switch statements are missing something on a couple of cases
+What are we checking for each case? Strings? What do strings need?

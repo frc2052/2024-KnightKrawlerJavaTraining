@@ -1,21 +1,18 @@
+// this is a digit sum calculator
+
 public class level11 {
-    public static void main(String...args){
-        int code = 0;
-        String ledMode = "NONE";
+    public static void main(String...args) {
+        int num = 12345;
+        int sum = calculateDigitSum(num);
+        System.out.println("The sum of digits in " + num + " is: " + sum);
+    }
 
-        switch(code){
-            case 1
-                ledMode = CONE;
-            case 2:
-                ledMode = CUBE;
-            case 3
-                ledMode = RED_DISABLED;
-            case 4:
-                ledMode = BLUE_DISABLED;
-            default:
-                ledMode = NONE;
+    public static int calculateDigitSum(int num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
         }
-
-        System.out.println(ledMode);
+        return sum;
     }
 }
