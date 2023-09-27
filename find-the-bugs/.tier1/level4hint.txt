@@ -1,2 +1,0 @@
-Remember we need to tell the code what type of variable it is!
-What is the syntax when checking if a variable equals something vs setting it as something?

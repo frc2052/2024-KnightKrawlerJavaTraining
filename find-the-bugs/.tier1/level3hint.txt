@@ -1,1 +1,0 @@
-When we create variables the code needs to know what kind of variable it is
