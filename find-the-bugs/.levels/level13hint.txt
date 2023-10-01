@@ -1,0 +1,1 @@
+The bug in this code is related to calculating the average of an array. Check how you are computing the sum and the average.
