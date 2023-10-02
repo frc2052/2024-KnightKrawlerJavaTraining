@@ -1,1 +1,2 @@
-The bug in this code is related to calculating the average of an array. Check how you are computing the sum and the average.
+One of bugs in this code is something with the 'for' loop. 
+What is wrong with line 5 when we make the array?
