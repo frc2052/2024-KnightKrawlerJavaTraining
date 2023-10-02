@@ -1,1 +1,1 @@
-The bug in this code is related to reversing the string. Think about how you can efficiently reverse a string in Java.
+The bugs in this code are related to the 'for' loop. Think about what is wrong with how it generates the reverse and how the loop iterates

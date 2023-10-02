@@ -1,1 +1,3 @@
-The bug in this code is related to finding the maximum element in an array. Think about how you should initialize the max variable.
+Logic issue in the 'if' statement
+What is wrong when making an array on line 5?
+Line 6 is missing something... what needs to go inside those parenthesis?
