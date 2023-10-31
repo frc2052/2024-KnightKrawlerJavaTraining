@@ -14,7 +14,7 @@ public class Main {
     
     private Boolean isDead = false;
     private Boolean hasWon = false;
-    private int currentPoisition = 0; 
+    private int currentPosition = 0; 
 
     
     public Main() {
