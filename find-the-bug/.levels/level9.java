@@ -4,16 +4,16 @@ public class level9 {
         String ledMode = "NONE";
 
         switch(code){
-            case 1
-                ledMode = CONE;
+            case 1:
+                ledMode = "CONE";
             case 2:
-                ledMode = CUBE;
-            case 3
-                ledMode = RED_DISABLED;
+                ledMode = "CUBE";
+            case 3:
+                ledMode = "RED_DISABLED";
             case 4:
-                ledMode = BLUE_DISABLED;
+                ledMode = "BLUE_DISABLED";
             default:
-                ledMode = NONE;
+                ledMode = "NONE";
         }
 
         System.out.println(ledMode);

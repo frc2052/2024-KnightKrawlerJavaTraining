@@ -17,7 +17,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Shooter extends SubsystemBase {
   // Setting up the shooter motor and feeder motor and feed in the ports
-  private final PWMSparkMax m_shooterMotor =
+  private final PWMSparkMax m_shooterMotor = new PWMSparkMax(ShooterConstants.kShooterMotorPort);
   private final PWMSparkMax m_feederMotor = new PWMSparkMax(ShooterConstants.kFeederMotorPort);
   private final Encoder m_shooterEncoder =
       new Encoder(
@@ -26,7 +26,7 @@ public class Shooter extends SubsystemBase {
           ShooterConstants.kEncoderReversed);
   private final SimpleMotorFeedforward m_shooterFeedforward =
       new SimpleMotorFeedforward(
-          ShooterConstants.kSVolts, ShooterConstants.kVVoltSecondsPerRotation;)
+          ShooterConstants.kSVolts, ShooterConstants.kVVoltSecondsPerRotation);
   private final PIDController m_shooterFeedback = new PIDController(ShooterConstants.kP, 0.0, 0.0);
 
   /** The shooter subsystem for the robot. */

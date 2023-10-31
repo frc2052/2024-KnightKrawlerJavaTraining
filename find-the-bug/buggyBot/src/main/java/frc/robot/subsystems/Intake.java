@@ -6,13 +6,19 @@ package frc.robot.subsystems;
 
 import static frc.robot.Constants.IntakeConstants;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
+import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
+import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+
 public class Intake extends SubsystemBase {
-  private final m_motor = new PWMSparkMax(IntakeConstants.kMotorPort);
+  private final PWMSparkMax m_motor = new PWMSparkMax(IntakeConstants.kMotorPort);
   private final DoubleSolenoid m_pistons =
       new DoubleSolenoid(
           PneumaticsModuleType.REVPH,
           IntakeConstants.kSolenoidPorts[0],
-          IntakeConstants.kSolenoidPorts[1];
+          IntakeConstants.kSolenoidPorts[1]);
 
   /** Returns a command that deploys the intake, and then runs the intake motor indefinitely. */
   public CommandBase intakeCommand() {
