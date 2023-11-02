@@ -3,6 +3,12 @@ package main.java.dungeonChallenge.dungeon;
 import java.util.Scanner;
 
 public class Main {
+    enum Direction {
+        NORTH,
+        EAST,
+        SOUTH,
+        WEST
+    }
     // Variable to store our instanced class for receiving input
     // NOTE: notice this variable has yet to be set equal to anything, this is done on line 13
     private Scanner input;
@@ -10,11 +16,13 @@ public class Main {
     private String inputValue;
 
     // Variable to store the users name once they provide it
-    private String name;        
+    public String name;        
     
     private Boolean isDead = false;
     private Boolean hasWon = false;
     private int currentPosition = 0; 
+
+
 
     
     public Main() {
@@ -30,13 +38,17 @@ public class Main {
         // Prints a customized welcome message for the user
         System.out.println("Welcome, " + name + "!");
 
+        final Player player = new Player(input, name);
+
         // Game Loop
-        while (!isDead && !hasWon) {
+        while (!player.isDead() && !player.hasWon) {
             switch (currentPosition) {
+                inputValue = input.nextLine();
+                inputValueTrimmed = inputValue.toLowerCase().trim();
                 case 0:
                     System.out.println("You are at the entrance, you can only go north. Type \"N\" to go north.");
                     inputValue = input.nextLine();
-                    if (inputValue.toLowerCase().trim().equals("n")) {
+                    if (inputValueTrimmed.equals("n")) {
                         currentPosition = 1;
                     } else {
                         System.out.println("Invalid direction. Only \"N\" is valid");
@@ -72,6 +84,9 @@ public class Main {
                     } else {
                         System.out.println("Invalid direction. Only \"E\" and \"B\" are valid");
                     }
+                    break;
+                case -1:
+                    System.out.println("you ran into a wall");
                     break;
             }
         }
