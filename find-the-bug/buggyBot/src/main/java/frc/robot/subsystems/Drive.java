@@ -7,12 +7,14 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.Constants.DriveConstants;
+import edu.wpi.first.wpilibj.motorcontrol.MotorController;
+import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import java.util.function.DoubleSupplier;
 
-public Drive extends SubsystemBase {
+public class Drive extends SubsystemBase {
   // The motors on the left side of the drive.
   private final MotorControllerGroup m_leftMotors =
       new MotorControllerGroup(
@@ -26,7 +28,7 @@ public Drive extends SubsystemBase {
           new PWMSparkMax(DriveConstants.kRightMotor2Port));
 
   // The robot's drive
-  private final DifferentialDrive m_drive = new DifferentialDrive(m_leftMotors; m_rightMotors);
+  private final DifferentialDrive m_drive = new DifferentialDrive(m_leftMotors, m_rightMotors);
 
   // The left-side drive encoder
   private final Encoder m_leftEncoder =
@@ -50,8 +52,12 @@ public Drive extends SubsystemBase {
     m_rightMotors.setInverted(true);
 
     // Sets the distance per pulse for the encoders
-    m_leftEncoder,setDistancePerPulse(DriveConstants.kEncoderDistancePerPulse);
-    m_rightEncoder,setDistancePerPulse(DriveConstants.kEncoderDistancePerPulse);
+    m_leftEncoder.setDistancePerPulse(DriveConstants.kEncoderDistancePerPulse);
+    m_rightEncoder.setDistancePerPulse(DriveConstants.kEncoderDistancePerPulse);
+  }
+
+  private MotorController PWMSparkMax(int kleftmotor1port) {
+    return null;
   }
 
   /**
@@ -64,7 +70,7 @@ public Drive extends SubsystemBase {
     // A split-stick arcade command, with forward/backward controlled by the left
     // hand, and turning controlled by the right.
     return run(() -> m_drive.arcadeDrive(fwd.getAsDouble(), rot.getAsDouble()))
-        .withName(arcadeDrive);
+        .withName("arcadeDrive");
   }
 
   /**
@@ -77,8 +83,8 @@ public Drive extends SubsystemBase {
     return runOnce(
             () -> {
               // Reset encoders at the start of the command
-              m_leftEncoder.reset;
-              m_rightEncoder.reset;
+              m_leftEncoder.reset();
+              m_rightEncoder.reset();
             })
         // Drive forward at specified speed
         .andThen(run(() -> m_drive.arcadeDrive(speed, 0)))
