@@ -1,9 +1,11 @@
 package main.java.dungeonChallenge.dungeon;
 
+import java.util.Scanner;
+
 public class Player {
     private Scanner input;
     String name;
-    String desiredDirection;
+    Direction desiredDirection;
     int currentRoom;
     Boolean moved = true;
     Boolean isDead = false;
@@ -16,7 +18,8 @@ public class Player {
 
 
     public String getUserInput() {
-        // Take the users input, convert it to lower case, and remove any blank spaces
+        // Take the users input, convert it to lower case, and remove any blank 
+        System.out.println("input: "+input.nextLine().toLowerCase().trim());
         return input.nextLine().toLowerCase().trim();
     }
     
@@ -46,11 +49,11 @@ public class Player {
                     return;
                 
                 case "h":
-                    //printHelpMenu();
+                    printHelpMenu();
                     break;
     
                 default:
-                    //invalidInput();
+                    invalidInput();
                     break;
             }
         }
