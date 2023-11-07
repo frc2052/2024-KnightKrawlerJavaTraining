@@ -22,7 +22,7 @@ public class Storage extends SubsystemBase {
   }
 
   /** Whether the ball storage is full. TRUE OR FALSE! */
-  public int isFull() {
+  public boolean isFull() {
     return m_ballSensor.get();
   }
 

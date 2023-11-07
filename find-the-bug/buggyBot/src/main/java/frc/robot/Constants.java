@@ -16,7 +16,7 @@ import edu.wpi.first.math.util.Units;
  */
 public final class Constants {
   public static final class DriveConstants {
-    public static final int kLeftMotor1Port = 0
+    public static final int kLeftMotor1Port = 0;
     public static final int kLeftMotor2Port = 1;
     public static final int kRightMotor1Port = 2;
     public static final int kRightMotor2Port = 3;
@@ -30,7 +30,7 @@ public final class Constants {
     public static final double kWheelDiameterMeters = Units.inchesToMeters(6);
     public static final double kEncoderDistancePerPulse =
         // Assumes the encoders are directly mounted on the wheel shafts
-        (kWheelDiameterMeters * Math.PI) / (double) kEncoderCPR
+        (kWheelDiameterMeters * Math.PI) / (double) kEncoderCPR;
   }
 
   public static final class ShooterConstants {
@@ -45,7 +45,7 @@ public final class Constants {
     public static final int kFeederMotorPort = 5;
 
     public static final double kShooterFreeRPS = 5300;
-    public static final kShooterTargetRPS = 4000;
+    public static final double kShooterTargetRPS = 4000;
     public static final double kShooterToleranceRPS = 50;
 
     // These are not real PID gains, and will have to be tuned for your specific robot.
@@ -66,9 +66,9 @@ public final class Constants {
     public static final int[] kSolenoidPorts = {0, 1};
   }
 
-  public static final StorageConstants {
-    public static final boolean kMotorPort = 7;
-    public static final boolean kBallSensorPort = 6;
+  public static final class StorageConstants {
+    public static final int kMotorPort = 7;
+    public static final int kBallSensorPort = 6;
   }
 
   public static final class AutoConstants {
