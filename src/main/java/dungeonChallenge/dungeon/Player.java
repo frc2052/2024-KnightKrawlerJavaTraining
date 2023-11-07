@@ -75,12 +75,28 @@ public class Player {
         return hasWon;
     }
 
+    public void setHasWon(Boolean hasWon) {
+        this.hasWon = hasWon;
+    }
+
     public Boolean isDead() {
         return isDead;
+    }
+
+    public void setIsDead(Boolean isDead) {
+        this.isDead = isDead;
     }
     
     public Boolean moved() {
         return moved;
+    }
+
+    private void printHelpMenu() {
+        System.out.println("help menu");
+    }
+
+    private void invalidInput() {
+        System.out.println("invalid input");
     }
 
 
