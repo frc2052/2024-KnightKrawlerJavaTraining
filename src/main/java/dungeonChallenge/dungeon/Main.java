@@ -9,6 +9,8 @@ public class Main {
 
     private String inputValue;
 
+
+
     // Variable to store the users name once they provide it
     private String name;
 
@@ -27,6 +29,7 @@ public class Main {
 
         // Prints a customized welcome message for the user
         System.out.println("Welcome, " + name + "!");
+        player = new Player(input, name);
 
         // Game Loop
         while (!isDead && !hasWon) {
@@ -79,4 +82,6 @@ public class Main {
     public static void main(String[] args) throws Exception {
         new Main();
     }
+
+ 
 }
