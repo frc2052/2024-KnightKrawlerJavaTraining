@@ -3,9 +3,9 @@
 
 public class level4 {
     public static void main(String...args){
-        input = 3;
-        answer = 4;
-        if (answer = input){
+        int input = 3;
+        int answer = 4;
+        if (answer == input){
             System.out.println("CORRECT");
         } else {
             System.out.println("INCORRECT");

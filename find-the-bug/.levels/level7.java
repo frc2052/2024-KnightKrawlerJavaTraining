@@ -13,7 +13,7 @@ public class level7 {
         }
     }
 
-    public static checkIfDriving(double wheelSpeed, boolean isEngineOn){
+    public static boolean checkIfDriving(double wheelSpeed, boolean isEngineOn){
         if (wheelSpeed > 0 && isEngineOn){
             return true;
         } else {

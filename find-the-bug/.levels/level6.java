@@ -6,7 +6,7 @@ public class level6 {
         int base = 0;
         int height = 40;
 
-        area = base * height;
-        System.out.println("TOTAL AREA: " area);
+        int area = base * height;
+        System.out.println("TOTAL AREA: " + area);
     }
 }

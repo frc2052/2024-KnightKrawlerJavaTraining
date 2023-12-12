@@ -7,7 +7,7 @@ public class level5 {
 
         if (intakeArmOut){
             System.out.println("ARM IS OUT");
-        } else {
+        } else if (!intakeArmOut) {
             System.out.println("ARM IS IN");
         } else {
             System.out.println("ARM IS BROKEN");

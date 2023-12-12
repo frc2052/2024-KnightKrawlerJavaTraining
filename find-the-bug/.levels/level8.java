@@ -4,13 +4,13 @@ public class level8 {
     public static void main(String...args){
         boolean afternoon = false;
         int time = 0;
-        while(time){
+        while(time <= 24){
             // increase time by 1 each cycle
-            time == 1;
+            time++;
 
             // check if it is past 12 and if so set it as the afternoon
-            if (time =< 12){
-                afternoon = true;
+            if (time >= 12){
+               afternoon = true;
             }
 
             System.out.println("Current time: " + time + " - Is Afternoon: " + afternoon);
